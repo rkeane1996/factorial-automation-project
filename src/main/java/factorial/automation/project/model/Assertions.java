@@ -1,6 +1,8 @@
 package factorial.automation.project.model;
 
 import java.math.BigInteger;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Assertions {
 
@@ -13,4 +15,5 @@ public class Assertions {
     public final String PRIVACY_MESSAGE = "This is the privacy document. We are not yet ready with it. Stay tuned!";
     public final BigInteger ResultForNumber22 = new BigInteger("1124000727777607680000");
     public final String HOME_PAGE_TITLE = "Factorial";
+    public final String COPYRIGHT_TEXT = "© Qxf2 Services 2013 - " + Calendar.getInstance().get(Calendar.YEAR);
 }

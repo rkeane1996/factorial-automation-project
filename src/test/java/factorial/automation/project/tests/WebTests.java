@@ -97,4 +97,10 @@ public class WebTests {
         FactorialPage homePage = new FactorialPage(driver);
         Assert.assertEquals(assertions.HOME_PAGE_TITLE, homePage.getTitle());
     }
+
+    @Test
+    public void verifyCorrectTextInCopyRightSection() {
+        FactorialPage homePage = new FactorialPage(driver);
+        Assert.assertEquals(assertions.COPYRIGHT_TEXT, homePage.copyrightYears());
+    }
 }

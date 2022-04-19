@@ -1,5 +1,6 @@
 package factorial.automation.project.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,9 @@ public class FactorialPage {
     @FindBy(xpath = "/html/body/div[2]/div/p[1]/a[2]")
     private WebElement privacyLink;
 
+    @FindBy(xpath = "/html/body/div[2]/div/p[2]")
+    private WebElement copyrightText;
+
     public void clickCalculateButton(){
         this.calculateFactorialBtn.click();
     }
@@ -56,5 +60,9 @@ public class FactorialPage {
 
     public String getTitle(){
         return driver.getTitle();
+    }
+
+    public String copyrightYears() {
+        return this.copyrightText.getText();
     }
 }
